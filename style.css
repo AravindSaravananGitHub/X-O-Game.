@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bgcolor:#3dc1d3;
+    --bgbox:#48dbfb;
+    --title: #9AECDB;
+    --text:#f1f2f6;
+    /*#1B9CFC
+    #9AECDB
+*/
+}
+
+html{
+    font-size: 8px;
+}
+body{
+    height: 100vh;
+    width:100vw;
+    background-color:var(--bgcolor);
+    color:#fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+.game{
+    height: 55rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 7px;
+    padding:1.3rem;
+}
+.box{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bgbox);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 1rem;
+}
+.title{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--title);
+    text-shadow: .25rem .25rem 0 hsl(240, 3%, 7%);
+    padding: 1rem;
+}
+.status{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.5rem;
+    text-shadow: .25rem .25rem 0 hsl(240, 3%, 7%);
+    margin: 1rem;
+}
+button{
+    width: 15rem;
+    height: 5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    background-color: #1B9CFC;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color:var(--text);
+    text-shadow: .25rem .25rem 0 hsl(240, 3%, 7%);
+    border-radius: 5px;
+}
+button:active{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px,
+    rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media (min-width:772px) {
+    html{
+        font-size: 10px;
+    }
+}
+.img{
+    text-shadow: .25rem .25rem 0 hsl(240, 3%, 7%);
+}
+
+.win{
+    animation: Aravind ease-in-out 1s infinite;
+}
+
+@keyframes Aravind {
+    0%{
+        background-color: #489cfb;
+    }
+    100%{
+        background-color: #4863fb;
+    }
+}
